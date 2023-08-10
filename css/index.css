@@ -1,6 +1,6 @@
 body{
 	min-width: 1200px;
-
+	background-color: white;
 }
 html{
 
@@ -170,6 +170,7 @@ html{
 	color: #0e3289;
 	padding: 16px 0;
 	position: relative;
+	text-align:center;
 }
 .indticol{
 	border-bottom: 3px solid #0e3289;
