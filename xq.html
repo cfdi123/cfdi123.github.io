@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta content="美年大健康,武汉美年大健康,武汉美年健康体检中心,武汉美年体检,武汉体检,武汉体检机构,武汉体检医院,武汉体检中心" name="keywords">
     <meta content="美年大健康产业控股股份有限公司（A股：SZ002044，以下简称“美年健康”）始创于2004年，是中国规模和影响力显著的健康体检与医疗集团，总部位于上海。公司拥有“美年大健康”“慈铭”“慈铭奥亚”“美兆”四大健康体检品牌。截至2022年底，美年健康在全国300余座城市布局611家体检中心，已实现中国内地版图全覆盖。" name="description">
-    <title>美年大健康|武汉美年大健康|武汉美年健康体检中心</title>
+    <title>体检预约-美年大健康|武汉美年大健康|武汉美年健康体检中心</title>
     <!--base-->
+	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -190,9 +191,9 @@
     <div class="slide">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="#"><img src="images/slide1.png" alt="" width="100%"/></a></div>
-                <div class="swiper-slide"><a href="#"><img src="images/slide1.png" alt="" width="100%"/></a></div>
-                <div class="swiper-slide"><a href="#"><img src="images/slide1.png" alt="" width="100%"/></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/slide1.png" alt="" width="100%" height="90%"/></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/slide2.png" alt="" width="100%" height="90%"/></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/slide1.png" alt="" width="100%" height="90%"/></a></div>
            
             </div>
             <!-- Add Pagination -->
@@ -253,6 +254,91 @@
 </div>
 
 
+
+
+
+
+<div class="suspension">
+	<div class="suspension-box">
+		<a href="#" class="a a-service "><i class="i"></i></a>
+		<a href="javascript:;" class="a a-service-phone "><i class="i"></i></a>
+		<a href="javascript:;" class="a a-qrcode"><i class="i"></i></a>
+		<a href="xq.html" class="a a-cart"><i class="i"></i></a>
+		<a href="javascript:;" class="a a-top"><i class="i"></i></a>
+		<div class="d d-service">
+			<i class="arrow"></i>
+			<div class="inner-box">
+				<div class="d-service-item clearfix">
+					<a href="xq.html" class="clearfix"><span class="circle"><i class="i-qq"></i></span><h3>咨询在线客服</h3></a>
+				</div>
+			</div>
+		</div>
+		<div class="d d-service-phone">
+			<i class="arrow"></i>
+			<div class="inner-box">
+				<div class="d-service-item clearfix">
+					<span class="circle"><i class="i-tel"></i></span>
+					<div class="text">
+						<p>服务热线</p>
+						<p class="red number">95503</p>
+					</div>
+				</div>
+				<div class="d-service-intro clearfix">
+					<p><i></i>体检预约</p>
+					<p><i></i>报告查询</p>
+					<p><i></i>活动热卖</p>
+				</div>
+			</div>
+		</div>
+		<div class="d d-qrcode">
+			<i class="arrow"></i>
+			<div class="inner-box">
+				<div class="qrcode-img"><img src="images/side_ewm.jpg" alt=""></div>
+				<p>微信服务号</p>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	/* ----- 侧边悬浮 ---- */
+	$(document).on("mouseenter", ".suspension .a", function(){
+		var _this = $(this);
+		var s = $(".suspension");
+		var isService = _this.hasClass("a-service");
+		var isServicePhone = _this.hasClass("a-service-phone");
+		var isQrcode = _this.hasClass("a-qrcode");
+		if(isService){ s.find(".d-service").show().siblings(".d").hide();}
+		if(isServicePhone){ s.find(".d-service-phone").show().siblings(".d").hide();}
+		if(isQrcode){ s.find(".d-qrcode").show().siblings(".d").hide();}
+	});
+	$(document).on("mouseleave", ".suspension, .suspension .a-top", function(){
+		$(".suspension").find(".d").hide();
+	});
+	$(document).on("mouseenter", ".suspension .a-top", function(){
+		$(".suspension").find(".d").hide(); 
+	});
+	$(document).on("click", ".suspension .a-top", function(){
+		$("html,body").animate({scrollTop: 0});
+	});
+	$(window).scroll(function(){
+		var st = $(document).scrollTop();
+		var $top = $(".suspension .a-top");
+		if(st > 400){
+			$top.css({display: 'block'});
+		}else{
+			if ($top.is(":visible")) {
+				$top.hide();
+			}
+		}
+	});
+	
+});	
+</script>
 
 </body>
 </html>
